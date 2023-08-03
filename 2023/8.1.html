@@ -12,6 +12,8 @@
     <title>DZY's Blog:随心所欲的分享！</title>
     <meta name="keywords" content=分享,blog,DZY,自制博客,博客>
     <meta name="description" content="DZY's Blog:随心所欲的分享！">
+    <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
+    <!-- ... -->
 </head>
 
 <body>
@@ -44,23 +46,37 @@
                 <p class="mb-0">Hello World</p>
                 <footer class="blockquote-footer">DZY</cite></footer>
             </blockquote>
-            
+
             <cite title="Source Title">
-          <br>  <br>这个是我自己写的博客，比较乐射，希望大家喜欢！
+                <br> <br>这个是我自己写的博客，比较乐射，希望大家喜欢！
         </div>
     </div>
-     <div class="card m-2">
-  <div class="card-body">
-    <h6>发布时间:2023.8.1</h6>
-    <script async src="http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+    <div class="card m-2">
+        <div class="card-body">
+            <h6>发布时间:2023.8.1</h6>
+            <script async src="http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
             </script>本站总访问量<span id="busuanzi_value_site_pv"></span>次！
-  </div>
-</div>
+        </div>
+    </div>
     <br>
-     <!-- 页脚区 -->
+    <div class="alert alert-info m-2" role="alert">
+        发表违反中华人民共和国法律,不良广告，辱骂等内容，后果自负！
+    </div>
+    <div id="waline"></div>
+    <script type="module">
+        import {
+            init
+        } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+
+        init({
+            el: '#waline',
+            serverURL: 'https://cosmic-moonbeam-e92b45.netlify.app/.netlify/functions/comment',
+        });
+    </script>
+    <!-- 页脚区 -->
     <div class="container-fluid">
         <h6 class="text-center">&copy;2023DZY's Blog</h6>
-         <p class="mb-0 text-center"><a class="nav-link" href="https://getbootstrap.com/">框架:Bootstrap 主题:自己写的^0^</a></p>
+        <p class="mb-0 text-center"><a class="nav-link" href="https://getbootstrap.com/">框架:Bootstrap 主题:自己写的^0^</a></p>
     </div>
     <!-- 页脚区 -->
     <!-- JavaScript 文件是可选的。从以下两种建议中选择一个即可！ -->

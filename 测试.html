@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>动态添加元素</title>
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <!-- 父元素 -->
+    </div>
+
+    <script>
+        // 创建新的div元素
+        var newDiv = document.createElement("div");
+        newDiv.className = "card";
+
+        // 创建h1标题
+        var h1 = document.createElement("h1");
+        h1.textContent = "动态添加的内容";
+        newDiv.appendChild(h1);
+
+        // 将新创建的元素添加到父元素中
+        
+        
+        
+        
+        
+        
+        var parent = document.getElementById("parent");
+        parent.appendChild(newDiv);
+    </script>
+</body>
+</html>

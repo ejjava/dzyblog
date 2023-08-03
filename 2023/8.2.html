@@ -8,13 +8,22 @@
 
     <!-- Bootstrap 的 CSS 文件 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-
+    <!-- 图片预览 -->
+    <link rel="stylesheet" href="dist/css/glightbox.css" />
     <title>DZY's Blog:随心所欲的分享！</title>
     <meta name="keywords" content=分享,blog,DZY,自制博客,博客>
     <meta name="description" content="DZY's Blog:随心所欲的分享！">
+       <!-- 评论 -->
+      <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
+     <!-- 图片预览 --> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
 </head>
 
 <body>
+
+   
     <br>
     <ul class="nav">
         <li class="nav-item">
@@ -43,12 +52,19 @@
             <blockquote class="blockquote">
                 <p class="mb-0">八月第一天的晚上</p>
                 <footer class="blockquote-footer">DZY</cite></footer>
-            </blockquote>
-            <img src="https://s1.ax1x.com/2023/08/02/pPPIEqO.jpg" class="img-fluid" alt="晚景">
+            </blockquote>           
+<a href="https://s1.ax1x.com/2023/08/02/pPPIEqO.jpg" class="glightbox">
+  <img class="img-fluid" src="https://s1.ax1x.com/2023/08/02/pPPIEqO.jpg" alt="image" />
+</a>
+    
             <cite title="Source Title">
+            
           <br>  <br>8.1晚间的一张图片，随便分享一下了（狗头）
         </div>
     </div>
+    
+    
+    
      <div class="card m-2">
   <div class="card-body">
     <h6>发布时间:2023.8.2</h6>
@@ -56,15 +72,38 @@
             </script>本站总访问量<span id="busuanzi_value_site_pv"></span>次！
   </div>
 </div>
-    <br>
+    
+    <div class="alert alert-info m-2" role="alert">
+        发表违反中华人民共和国法律,不良广告，辱骂等内容，后果自负！
+    </div>
+    <div id="waline"></div>
+    <script type="module">
+        import {
+            init
+        } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+
+        init({
+            el: '#waline',
+            serverURL: 'https://cosmic-moonbeam-e92b45.netlify.app/.netlify/functions/comment',
+        });
+    </script>
      <!-- 页脚区 -->
     <div class="container-fluid">
         <h6 class="text-center">&copy;2023DZY's Blog</h6>
          <p class="mb-0 text-center"><a class="nav-link" href="https://getbootstrap.com/">框架:Bootstrap 主题:自己写的^0^</a></p>
     </div>
     <!-- 页脚区 -->
-    <!-- JavaScript 文件是可选的。从以下两种建议中选择一个即可！ -->
-
+    <!-- 图片预览 -->
+    <script>
+            const lightbox = GLightbox({
+            touchNavigation: true,
+            loop: true,
+            autoplayVideos: true
+            });
+        </script>
+          <!-- 图片预览 -->
+   
+ <script src="dist/js/glightbox.min.js"></script>
     <!-- 选项 1：jQuery 和 Bootstrap 集成包（集成了 Popper） -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-7ymO4nGrkm372HoSbq1OY2DP4pEZnMiA+E0F3zPr+JQQtQ82gQ1HPY3QIVtztVua" crossorigin="anonymous"></script>

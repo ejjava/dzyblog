@@ -1,0 +1,28 @@
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #update-notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ffffff;
+            color: #333333;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 20px;
+            opacity: 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            transform: translateX(100%);
+            z-index: 9999;
+        }
+
+        @media only screen and (max-width: 600px) {
+            #update-notification {
+                font-size: 16px;
+            }
+        }
+   
+
