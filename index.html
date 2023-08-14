@@ -9,24 +9,79 @@
     <title>DZY's Blog:随心所欲的分享！</title>
     <meta name="keywords" content=分享,blog,DZY,自制博客,博客>
     <meta name="description" content="DZY's Blog:随心所欲的分享！">
-    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />  <!-- MD框架 -->
-    <link rel="stylesheet" href="./css/Eject.css" />  <!-- 弹窗 -->
+    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> <!-- MD框架 -->
+    <link rel="stylesheet" href="./css/Eject.css" /> <!-- 弹窗 -->
 </head>
-<body>
-    <br>
-    <!-- 头部区 --> 
-    <div id="head"></div>
-        <div class="container-fluid">
+<body>    
+    <!-- 头部区 -->  
+ <nav class="navbar">
+    <ul class="nav">
+       <li class="nav-item">
+            <a class="nav-link disabled">DZY's Blog</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="https://dzyblog.pages.dev/">主页</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="https://dzyblog.pages.dev//Archiving">归档</a>
+       </li>
+        <li class="nav-item">
+            <a class="nav-link" href="https://dzyblog.pages.dev/category">分类</a>
+        </li>   
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+         更多
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item text-center" href="https://dzyblog.pages.dev/404">搜索</a>
+          <a class="dropdown-item text-center" href="https://dzyblog.pages.dev/404">友链</a>
+          <a class="dropdown-item text-center" href="https://dzyblog.pages.dev/About">关于</a> 
+      </li>
+    </ul>
+</nav>
+    <div class="container-fluid">
         <footer class="blockquote-footer" class="col-sm" id="jinrishici-sentence">有情人终成眷属</cite></footer>
         <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     </div>
-    <!-- 头部区 --> 
+    <!-- 头部区 -->
     <!-- 内容区 -->
-    <div id="content"></div>
-    <!-- 内容区 --> 
+    <div class="card m-2 mdui-ripple">
+        <div class="card-body">
+            <blockquote class="blockquote">
+                <h4 class="article-title"><a class="text-body" href="/2023/8.3.html"><span>博客更新了</span></a></h4>
+                <footer class="blockquote-footer">2023.8.3</cite></footer>
+                <a href="./category.html#网站历程" class="badge badge-info">网站历程</a>
+            </blockquote>
+            <h6 class="article-title text-body"><a class="text-body" href="/2023/8.3.html"><span>更新了整体框架，评论，图片浏览</span></a></h6>
+        </div>
+    </div>
+    <div class="card m-2 mdui-ripple">
+        <div class="card-body">
+            <blockquote class="blockquote">
+                <h4 class="article-title"><a class="text-body" href="/2023/8.2.html"><span>八月第一天的夜晚</span></a></h4>
+                <footer class="blockquote-footer">2023.8.2</cite></footer>
+                <a href="./category.html#生活" class="badge badge-info">生活</a>
+            </blockquote>
+            <h6 class="article-title text-body"><a class="text-body" href="/2023/8.2.html"><span>这个八月第一天晚上随手拍的一张照片，就简单拿来分享一下</span></a></h6>
+        </div>
+    </div>
+    <div class="card m-2 mdui-ripple">
+        <div class="card-body">
+            <blockquote class="blockquote">
+                <h4 class="article-title"><a class="text-body" href="/2023/8.1.html"><span>Hello World</span></a></h4>
+                <footer class="blockquote-footer">2023.8.1</cite></footer>
+                <a href="./category.html#网站历程" class="badge badge-info">网站历程</a>
+            </blockquote>
+            <h6 class="article-title text-body"><a class="text-body" href="/2023/8.1.html"><span>这是我手搓的一个乐射博客</span></a></h6>
+        </div>
+    </div>
+    <!-- 内容区 -->
     <br>
     <!-- 页脚区 -->
-    <div id="Footer"></div>
+    <div class="container-fluid">
+        <h6 class="text-center">&copy;2023DZY's Blog</h6>
+        <p class="mb-0 text-center"><a class="nav-link" href="https://getbootstrap.com/">框架:Bootstrap 主题:自己写的^0^</a></p>
+    </div>
     <!-- 页脚区 -->
     <div id="update-notification" class="mdui-card mdui-shadow-5">
         <div class="mdui-card-content">
@@ -34,14 +89,14 @@
             <br>
             <span id="sitetime"></span><!-- 运行时间 -->
         </div>
-    </div>
+    </div>   
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="js/sitetime.js"></script><!-- 运行时间 -->
     <script src="js/Eject.js"></script><!-- 弹窗 -->
-    <script src="./js/Splicing.js"></script><!-- 拼接 -->
-    <script src="http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"><!-- 访问 -->     
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script><!-- 框架 --> 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-7ymO4nGrkm372HoSbq1OY2DP4pEZnMiA+E0F3zPr+JQQtQ82gQ1HPY3QIVtztVua" crossorigin="anonymous"></script><!-- 框架 --> 
-    <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script><!-- MD框架 --> 
+    <script src="http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"><!-- 访问  -->       
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script><!-- 框架 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-7ymO4nGrkm372HoSbq1OY2DP4pEZnMiA+E0F3zPr+JQQtQ82gQ1HPY3QIVtztVua" crossorigin="anonymous"></script><!-- 框架 -->
+    <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script><!-- MD框架 -->
 </body>
-
 </html>

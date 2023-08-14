@@ -57,7 +57,6 @@ var cardHtml = `
     <div class="container-fluid">
         <h6 class="text-center">&copy;2023DZY's Blog</h6>
         <p class="mb-0 text-center"><a class="nav-link" href="https://getbootstrap.com/">框架:Bootstrap 主题:自己写的^0^</a></p>
-
     </div>
     
     
