@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" href="./css/tc.css" /> <!-- 弹窗 -->
+    <link rel="stylesheet" href="./css/bj.css" /> <!-- 背景 -->
+    <link rel="stylesheet" href="./css/yj.css" /> <!-- 圆角 -->
+    <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
+    <!-- Bootstrap 的 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- MDUI CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+    <title>DZY's Blog- 爱生活 爱分享！</title>
+    <meta name="keywords" content=分享,blog,DZY,自制博客,博客>
+    <meta name="description" content="DZY's Blog- 爱生活 爱分享">
+    <style>
+        body {
+            font-weight: 700;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url(https://root-a.top/Random);
+            opacity: 0.5; /* 透明度，可以根据需要进行调整 */
+            z-index: -1; /* 将背景置于最底层 */
+        }
+    </style>
+</head>
+<body>
+    <div id="chehuanlan"></div>
+    <br><br>
+    <!-- 内容区 -->
+    <div class="card m-2">
+        <div class="card-body">
+            <h3 class="text-center">博客更新了</h3>
+            <p class="text-center">发布于:2023.8.1 本文总阅读量<span id="busuanzi_value_page_pv"></span>次</p>
+            <p><br><h3>我更新了什么？</h3><br>1.网站重构<br>2.评论<br>3.图片浏览<br>到时候，我会单独写一篇文章来对其进行说明，拜拜👋</p>
+        </div>
+    </div>
+    <div class="card m-2">
+        <div class="card-header">
+            <h6>分类</h6>
+        </div>
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <a href="./" class="p-2 btn btn-outline-dark" role="button" aria-pressed="true">网站历程</a>
+            </blockquote>
+        </div>
+    </div>
+    <!-- 内容区 -->
+    <div id="waline"></div>
+    <script type="module">
+        import {
+            init
+        } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+
+        init({
+            el: '#waline',
+            serverURL: 'https://ejcomment.netlify.app//.netlify/functions/comment',
+        });
+    </script>
+    <!-- 底部区 -->
+    <div id="footer"></div>
+    <!-- 底部区 -->
+    <script src="js/diaoyong1.js"></script> <!-- 调用 -->
+    <script src="http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+    <!-- 访问  -->
+    <script src="js/sitetime.js"></script><!-- 运行时间 -->
+    <!-- 一言 -->
+    <script src="js/yiyan.js"></script>
+    <!-- 选项 1：jQuery 和 Bootstrap 集成包（集成了 Popper） -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-7ymO4nGrkm372HoSbq1OY2DP4pEZnMiA+E0F3zPr+JQQtQ82gQ1HPY3QIVtztVua" crossorigin="anonymous"></script>
+    <!-- MDUI JavaScript -->
+    <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+</body>
+</html>
