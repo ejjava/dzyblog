@@ -8,7 +8,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link rel="stylesheet" href="./css/tc.css" /> <!-- 弹窗 -->
     <link rel="stylesheet" href="./css/bj.css" /> <!-- 背景 -->
-    <script src="./js/sou.js"></script>
     <link rel="stylesheet" href="./css/yj.css" /> <!-- 圆角 -->
     <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
     <!-- Bootstrap 的 CSS 文件 -->
@@ -33,31 +32,53 @@
             opacity: 0.5; /* 透明度，可以根据需要进行调整 */
             z-index: -1; /* 将背景置于最底层 */
         }
-        walie{
-             opacity: 0.5; /* 透明度，可以根据需要进行调整 */
-        }
     </style>
 </head>
 <body>
     <div id="chehuanlan"></div>
     <br><br>
     <!-- 内容区 -->
-    <br><br><br>
-   <h3 class="text-center">文章</h3>
-   <div class="m-4 mdui-textfield">
- 
-  <input class="mdui-textfield-input" type="text" id="myInput" onkeyup="myFunction()" placeholder="找不到吗？请搜索吧！">
-
-</div>
-<ul id="myUL">
- <li><a href="./2023/10.2.html" class="m-2 btn btn-outline-dark" role="button" aria-pressed="true">2023-高中法向量求法（持续更新）-学习</a></li> 
-<li><a href="./2023/8.3.html" class="m-2 btn btn-outline-dark" role="button" aria-pressed="true">2023-博客更新了-网站历程</a></li>
-<li><a href="./2023/8.2.html" class="m-2 btn btn-outline-dark" role="button" aria-pressed="true">2023-八月第一天的夜晚-生活</a></li>
-<li><a href="./2023/8.1.html" class="m-2 btn btn-outline-dark" role="button" aria-pressed="true">2023-Hello word-网站历程</a></li>
-   
-  </ul>
-   
-   
+    <div class="card m-2">
+        <div class="card-body">
+            <h3 class="text-center">高中法向量求法（持续更新）</h3>
+            <p class="text-center">发布于:2023.10.2 本文总阅读量<span id="busuanzi_value_page_pv"></span>次</p>
+            <p>最新写作业时候发现法向量算的又慢又不准！于是写下了本篇文章！（用于选择填空，验算）</p>
+            <h4>方法一</h4>
+            <p>假设有两个向量A=(9,8,5) B=(2，1，1)</p>
+            <h6>①先将它们每个重复写2遍</h6>
+            <p>9 8 5 9 8 5</p>
+            <p>2 1 1 2 1 1</p>
+            <h6>②掐头去尾</h6>
+              <p> 8 5 9 8 </p>
+            <p> 1 1 2 1 </p>
+              <h6>②组成新的三组</h6>
+            <p> 8 5 &nbsp;&nbsp;5 9&nbsp;&nbsp; 9 8</p>
+            <p> 1 1 &nbsp;&nbsp;1 2&nbsp;&nbsp; 2 1</p>
+            <h6>②交叉相乘并相减</h6>
+          <p>n=(x,y,z)</p>
+          <p>X:1*8-1*5=3</p>
+          <p>X:5*2-9*1=1</p>
+          <p>X:9*1-2*8=-7</p>
+          <p>所以n=(3,1,-7)</p>
+          <h4>方法二（推荐）</h4>
+          <p>这就是叉乘(大学)吗？^0^</p>
+          <p>a=(x1,y1,z1)&nbsp;a=(x2,y2,z2)</p>
+          <p>axb=(y1z2-y2z1,-(x1z2-x2z1),x1y2-x2y1)</p>
+          <p>好复杂啊！没关系，我有口诀！</p>
+          <h5>!!!!!!求谁挡谁，求交叉相乘相减，y轴相反!!!!!!</h5>
+          <p>看不懂的评论区留言！</p>
+        </div>
+    </div>
+    <div class="card m-2">
+        <div class="card-header">
+            <h6>分类</h6>
+        </div>
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <a href="./" class="p-2 btn btn-outline-dark" role="button" aria-pressed="true">学习</a>
+            </blockquote>
+        </div>
+    </div>
     <!-- 内容区 -->
     <div id="waline"></div>
     <script type="module">
@@ -70,7 +91,6 @@
             serverURL: 'https://ejcomment.netlify.app//.netlify/functions/comment',
         });
     </script>
-    
     <!-- 底部区 -->
     <div id="footer"></div>
     <!-- 底部区 -->

@@ -21,7 +21,7 @@ var cardHtml = `
         <br><br><br>
         <img class="text-center mdui-img-circle" src="http://q2.qlogo.cn/headimg_dl?dst_uin=914933408&spec=100" />
         <br><br>
-        <a href="#" class="p-2 w-75 btn btn-outline-dark shou" role="button" aria-pressed="true">搜索</a>
+        <a href="./index.html" class="p-2 w-75 btn btn-outline-dark shou" role="button" aria-pressed="true">搜索</a>
         <br><br>
         <a href="#" class="btn btn-outline-dark" role="button" aria-pressed="true" style="border-color: rgba(0, 0, 0, 0.0);">
             <i class="mdui-icon material-icons che">&#xe88a;</i> 首页
@@ -30,20 +30,20 @@ var cardHtml = `
             <i class="mdui-icon material-icons">&#xe2bc;</i> 项目
         </a>
         <br>
-        <a href="#" class="btn btn-outline-dark" role="button" aria-pressed="true" style="border-color: rgba(0, 0, 0, 0.0);">
+        <a href="./index.html" class="btn btn-outline-dark" role="button" aria-pressed="true" style="border-color: rgba(0, 0, 0, 0.0);">
             <i class="mdui-icon material-icons">&#xe85d;</i> 文章
         </a>
         <br>
-        <a href="./time.html" class="btn btn-outline-dark" role="button" aria-pressed="true" style="border-color: rgba(0, 0, 0, 0.0);">
+        <a href="./404.html" class="btn btn-outline-dark" role="button" aria-pressed="true" style="border-color: rgba(0, 0, 0, 0.0);">
             <i class="mdui-icon material-icons">&#xe01b;</i> 时光
         </a>
         <br>
-        <a href="./category.html" class="btn btn-outline-dark" role="button" aria-pressed="true" style="border-color: rgba(0, 0, 0, 0.0);">
+        <a href="./404.html" class="btn btn-outline-dark" role="button" aria-pressed="true" style="border-color: rgba(0, 0, 0, 0.0);">
             <i class="mdui-icon material-icons">&#xe5c3;</i> 分类
         </a>
         <br
         <br> 
-         <a href="./about.html" class="btn btn-outline-dark" role="button" aria-pressed="true" style="border-color: rgba(0, 0, 0, 0.0);">
+         <a href="./404.html" class="btn btn-outline-dark" role="button" aria-pressed="true" style="border-color: rgba(0, 0, 0, 0.0);">
             <i class="mdui-icon material-icons">&#xe001;</i> 关于
         </a>
         <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=0)" width="60%" color=#FFFFFF SIZE=1>

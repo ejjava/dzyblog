@@ -34,15 +34,15 @@ var cardHtml = `
             <i class="mdui-icon material-icons">&#xe85d;</i> 文章
         </a>
         <br>
-        <a href="./archives/time.html" class="btn btn-outline-dark" role="button" aria-pressed="true" style="border-color: rgba(0, 0, 0, 0.0);">
+        <a href="./archives/404.html" class="btn btn-outline-dark" role="button" aria-pressed="true" style="border-color: rgba(0, 0, 0, 0.0);">
             <i class="mdui-icon material-icons">&#xe01b;</i> 时光
         </a>
         <br>
-        <a href="./archives/category.html" class="btn btn-outline-dark" role="button" aria-pressed="true" style="border-color: rgba(0, 0, 0, 0.0);">
+        <a href="./archives/404.html" class="btn btn-outline-dark" role="button" aria-pressed="true" style="border-color: rgba(0, 0, 0, 0.0);">
             <i class="mdui-icon material-icons">&#xe5c3;</i> 分类
         </a>
         <br>
-        <a href="./archives/about.html" class="btn btn-outline-dark" role="button" aria-pressed="true" style="border-color: rgba(0, 0, 0, 0.0);">
+        <a href="./archives/404.html" class="btn btn-outline-dark" role="button" aria-pressed="true" style="border-color: rgba(0, 0, 0, 0.0);">
             <i <i class="mdui-icon material-icons">&#xe001;</i> 关于
         </a>
         <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=0)" width="60%" color=#FFFFFF SIZE=1>

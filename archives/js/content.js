@@ -1,6 +1,11 @@
 
     document.addEventListener("DOMContentLoaded", function() {
       var contentData = [
+       {
+          title: "高中法向量求法（持续更新）",
+          text: "简单高效的法向量求法!",
+          image: ""
+        },
         {
           title: "博客更新了",
           text: "更新了整体框架，评论，图片浏览",
