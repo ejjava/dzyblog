@@ -1,20 +1,14 @@
 <!doctype html>
 <html lang="zh-cmn-Hans">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
     <meta name="renderer" content="webkit" />
     <meta name="force-rendering" content="webkit" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <link rel="stylesheet" href="./css/tc.css" /> <!-- 弹窗 -->
-    <link rel="stylesheet" href="./css/bj.css" /> <!-- 背景 -->
-    <script src="./js/sou.js"></script>
-    <link rel="stylesheet" href="./css/yj.css" /> <!-- 圆角 -->
-    <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
-    <!-- Bootstrap 的 CSS 文件 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <!-- MDUI CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+    <link rel="stylesheet" href="./css/BeiJing.css" /> <!-- 背景 -->
+    <link rel="stylesheet" href="./css/Home.css" /> <!-- 主页 -->
     <title>DZY's Blog- 爱生活 爱分享！</title>
     <meta name="keywords" content=分享,blog,DZY,自制博客,博客>
     <meta name="description" content="DZY's Blog- 爱生活 爱分享">
@@ -22,67 +16,69 @@
         body {
             font-weight: 700;
         }
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url(https://root-a.top/Random);
-            opacity: 0.5; /* 透明度，可以根据需要进行调整 */
-            z-index: -1; /* 将背景置于最底层 */
-        }
-        walie{
-             opacity: 0.5; /* 透明度，可以根据需要进行调整 */
-        }
     </style>
 </head>
+
 <body>
-    <div id="chehuanlan"></div>
-    <br><br>
-    <!-- 内容区 -->
-    <br><br><br>
-   <h3 class="text-center">碎碎念</h3>
-   <div class="m-4 mdui-textfield">
- 
-  <input class="mdui-textfield-input" type="text" id="myInput" onkeyup="myFunction()" placeholder="找不到吗？请搜索吧！">
 
-</div>
-<ul id="myUL">
-  <li><a href="#" class="m-2 btn btn-outline-dark" role="button" aria-pressed="true">今天吃什么？2023.9.1</a></li>
-  
-  <li><a href="#" class="m-2 btn btn-outline-dark" role="button" aria-pressed="true">阿巴阿巴！2023.9.1</a></li>
-  
-  </ul>
-   
-   
-    <!-- 内容区 -->
-    <div id="waline"></div>
-    <script type="module">
-        import {
-            init
-        } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+    <!-- 侧滑栏 -->
+    <div class="CheHuaLan">
+        <br><br><br>
+        <img class="tx" src="http://q2.qlogo.cn/headimg_dl?dst_uin=914933408&spec=100" alt="头像" />
+        <p class="CheHuaLan-p">一个萌新不定期更新</p>
+        <hr width="80%">
+        <div>
+            <li class="CheHuaLan-LieBiao"><a href="../../">首页</a></li>
+            <li class="CheHuaLan-LieBiao"><a href="../archives/index.html">文章</a></li>
+            <li class="CheHuaLan-LieBiao"><a href="">碎碎念</a></li>
+           </div>
+    </div>
 
-        init({
-            el: '#waline',
-            serverURL: 'https://ejcomment.netlify.app//.netlify/functions/comment',
-        });
-    </script>
-    
-    <!-- 底部区 -->
-    <div id="footer"></div>
-    <!-- 底部区 -->
-    <script src="js/diaoyong1.js"></script> <!-- 调用 -->
+    <!--菜单按钮-->
+    <div class="CaiDan">
+        <a>≡</a>
+    </div>
+
+    <br>
+    <br>
+    <!--内容-->
+    <div id="NeiRong">
+        <div id="NeiRong-KaPian" class="NeiRong">
+            <h1 class="NeiRong-BiaoTi">碎碎念</h1>
+            
+            <hr width="80%">
+            <br>
+
+            <div class="NeiRong-PaiBan">
+
+
+
+            </div>
+            <ul class="myUL" id="myUL">
+                <li><a href="">今天吃了我喜欢的饺子-2025.7.2</a></li><br>
+                <li><a href="">坐下-2024.5.9</a></li><br>
+                <li><a href="">今天吃什么-2023.9.1</a></li><br>
+                <li><a href="">阿巴阿巴-2023.9.1</a></li>
+
+            </ul>
+
+        </div>
+    </div>
+    <!--页脚-->
+    <p class="YeJiao">Copyright © by DZY All Rights Reserved 2023-2025</p>
+
+    <!--返回顶部-->
+    <div style="border-radius:10px" class="HanHuiDingBu">
+        <a href="#">返回顶部</a>
+    </div>
     <script src="http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
-    <!-- 访问  -->
-    <script src="js/sitetime.js"></script><!-- 运行时间 -->
-    <!-- 一言 -->
-    <script src="js/yiyan.js"></script>
-    <!-- 选项 1：jQuery 和 Bootstrap 集成包（集成了 Popper） -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-7ymO4nGrkm372HoSbq1OY2DP4pEZnMiA+E0F3zPr+JQQtQ82gQ1HPY3QIVtztVua" crossorigin="anonymous"></script>
-    <!-- MDUI JavaScript -->
-    <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+        <!-- 访问  
+        -->
+    <script src="js/content.js"></script> <!-- 文章获取 -->
+    <script src="js/CheHuaLan.js"></script><!-- 侧滑栏组件 -->
+    <script src="js/JianChe.js"></script><!-- 监测按钮 -->
+    <script src="js/sou.js"></script><!--搜索 -->
+
 </body>
+
 </html>

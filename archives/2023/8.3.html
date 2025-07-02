@@ -1,19 +1,14 @@
 <!doctype html>
 <html lang="zh-cmn-Hans">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
     <meta name="renderer" content="webkit" />
     <meta name="force-rendering" content="webkit" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <link rel="stylesheet" href="./css/tc.css" /> <!-- 弹窗 -->
-    <link rel="stylesheet" href="./css/bj.css" /> <!-- 背景 -->
-    <link rel="stylesheet" href="./css/yj.css" /> <!-- 圆角 -->
-    <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
-    <!-- Bootstrap 的 CSS 文件 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <!-- MDUI CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+    <link rel="stylesheet" href="./css/BeiJing.css" /> <!-- 背景 -->
+    <link rel="stylesheet" href="./css/Home.css" /> <!-- 主页 -->
     <title>DZY's Blog- 爱生活 爱分享！</title>
     <meta name="keywords" content=分享,blog,DZY,自制博客,博客>
     <meta name="description" content="DZY's Blog- 爱生活 爱分享">
@@ -21,65 +16,89 @@
         body {
             font-weight: 700;
         }
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url(https://root-a.top/Random);
-            opacity: 0.5; /* 透明度，可以根据需要进行调整 */
-            z-index: -1; /* 将背景置于最底层 */
-        }
     </style>
 </head>
-<body>
-    <div id="chehuanlan"></div>
-    <br><br>
-    <!-- 内容区 -->
-    <div class="card m-2">
-        <div class="card-body">
-            <h3 class="text-center">博客更新了</h3>
-            <p class="text-center">发布于:2023.8.1 本文总阅读量<span id="busuanzi_value_page_pv"></span>次</p>
-            <p><br><h3>我更新了什么？</h3><br>1.网站重构<br>2.评论<br>3.图片浏览<br>到时候，我会单独写一篇文章来对其进行说明，拜拜👋</p>
-        </div>
-    </div>
-    <div class="card m-2">
-        <div class="card-header">
-            <h6>分类</h6>
-        </div>
-        <div class="card-body">
-            <blockquote class="blockquote mb-0">
-                <a href="./" class="p-2 btn btn-outline-dark" role="button" aria-pressed="true">网站历程</a>
-            </blockquote>
-        </div>
-    </div>
-    <!-- 内容区 -->
-    <div id="waline"></div>
-    <script type="module">
-        import {
-            init
-        } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
 
-        init({
-            el: '#waline',
-            serverURL: 'https://ejcomment.netlify.app//.netlify/functions/comment',
-        });
-    </script>
-    <!-- 底部区 -->
-    <div id="footer"></div>
-    <!-- 底部区 -->
-    <script src="js/diaoyong1.js"></script> <!-- 调用 -->
-    <script src="http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
-    <!-- 访问  -->
-    <script src="js/sitetime.js"></script><!-- 运行时间 -->
-    <!-- 一言 -->
-    <script src="js/yiyan.js"></script>
-    <!-- 选项 1：jQuery 和 Bootstrap 集成包（集成了 Popper） -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-7ymO4nGrkm372HoSbq1OY2DP4pEZnMiA+E0F3zPr+JQQtQ82gQ1HPY3QIVtztVua" crossorigin="anonymous"></script>
-    <!-- MDUI JavaScript -->
-    <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+<body>
+
+    <!-- 侧滑栏 -->
+    <div class="CheHuaLan">
+        <br><br><br>
+        <img class="tx" src="http://q2.qlogo.cn/headimg_dl?dst_uin=914933408&spec=100" alt="头像" />
+        <p class="CheHuaLan-p">一个萌新不定期更新</p>
+        <hr width="80%">
+        <div>
+            <li class="CheHuaLan-LieBiao"><a href="../../../">首页</a></li>
+            <li class="CheHuaLan-LieBiao"><a href="../../archives/index.html">文章</a></li>
+            <li class="CheHuaLan-LieBiao"><a href="../../archives/suisuiread.html">碎碎念</a></li>
+           </div>
+    </div>
+
+    <!--菜单按钮-->
+    <div class="CaiDan">
+        <a>≡</a>
+    </div>
+   
+ <br>
+ <br>
+    <!--内容-->
+  <div id="NeiRong">
+    <div id="NeiRong-KaPian" class="NeiRong">      
+        <h1 class="NeiRong-BiaoTi">博客更新了</h1>
+        <p class="NeiRong-FaBu">发布于:2023.8.3 更新：2025.7.2 本文总阅读量<span id="busuanzi_value_page_pv"></span>次</p> 
+        <hr width="80%">
+        <br>
+        
+        <div class="NeiRong-PaiBan">
+            <h3>我更新了什么？</h3>
+            <p>很高兴向大家宣布，我的个人博客完成了一次重要更新！这次更新主要包含以下改进：</p>
+            
+            <ul>
+                <li><strong>网站重构</strong>：网站架构进行了优化，提升了加载速度</li>
+                <li><strong>评论功能</strong>：新增了读者评论系统，利大家交流互动</li>
+                <li><strong>图片浏览</strong>：改进了图片效果，支持更好的视觉体验</li>
+            </ul>
+            
+            <h3>更新背后的故事</h3>
+            <p>这次更新花费了我近两周的时间，期间遇到了不少技术挑战</p>
+            
+            <h3>通知（2025.7.2）</h3>
+            <p>由于抛弃了框架，准备自己写这些功能都没有了：</p>
+            <ul>
+                <li>评论</li>
+                <li>图片展示</li>
+                
+            </ul>
+            
+            <h3>感谢与期待</h3>
+            <p>感谢大家一直以来的支持！如果对新功能有任何建议或反馈，欢迎在评论区留言。</p>
+            
+            <p>拜拜👋，我们下篇文章见！</p>
+        </div>
+    </div>
+</div>
+    <br>
+    <div class="FenLei">
+    <h2 class="NeiRong-h2">分类</h2> 
+    <hr width="80%">
+<div class="lianxi">
+            <br>        
+            <a href="">网站历程</a>
+            <br>
+        </div>
+        </div>
+    <!--页脚-->
+    <p class="YeJiao">Copyright © by DZY All Rights Reserved 2023-2025</p>
+
+    <!--返回顶部-->
+    <div style="border-radius:10px" class="HanHuiDingBu">
+        <a href="#">返回顶部</a>
+    </div>
+    <script src="http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">  <!-- 访问  -->
+    <script src="js/content.js"></script> <!-- 文章获取 -->
+    <script src="js/CheHuaLan.js"></script><!-- 侧滑栏组件 -->
+    <script src="js/JianChe.js"></script><!-- 监测按钮 -->
+
 </body>
+
 </html>

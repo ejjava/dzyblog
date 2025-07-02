@@ -5,15 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
     <meta name="renderer" content="webkit" />
+    <link rel="shortcut icon" href="favicon.ico"> <!-- 在HTML的head标签里添加如下代码即可 -->
     <meta name="force-rendering" content="webkit" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <link rel="stylesheet" href="./css/tc.css" /> <!-- 弹窗 -->
-    <link rel="stylesheet" href="./css/bj.css" /> <!-- 背景 -->
-    <link rel="stylesheet" href="./css/yj.css" /> <!-- 圆角 -->
-    <!-- Bootstrap 的 CSS 文件 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <!-- MDUI CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+    <link rel="stylesheet" href="./css/BeiJing.css" /> <!-- 背景 -->
+    <link rel="stylesheet" href="./css/Home.css" /> <!-- 主页 -->
     <title>DZY's Blog- 爱生活 爱分享！</title>
     <meta name="keywords" content=分享,blog,DZY,自制博客,博客>
     <meta name="description" content="DZY's Blog- 爱生活 爱分享">
@@ -23,82 +19,84 @@
         }
     </style>
 </head>
+
 <body>
-    <div id="chehuanlan"></div>
-    <div id="666" class="h-100 crd m- text-center cardd">
-        <br><br><br><br><br><br><br>
-        <br<br><br><br>
-            <div class="card-body" id="666">
-                <div class="mdui-ripple">
-                    <img class="text-center mdui-img-fluid mdui-img-circle" data-src="http://q2.qlogo.cn/headimg_dl?dst_uin=914933408&spec=100" />
-                    <img class="text-center mdui-img-circle" src="http://q2.qlogo.cn/headimg_dl?dst_uin=914933408&spec=100" />
-                    <br><br>
-                    <span class="jinrishici-sentence p-3 badge badge-pill badge-dark"></span>
-                    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-                    <br><br><a href="./" class="p-2 btn btn-outline-dark" role="button" aria-pressed="true">微信</a>
-                    <a href="./" class="p-2 btn btn-outline-dark" role="button" aria-pressed="true">QQ</a>
-                    <a href="./" class="p-2 btn btn-outline-dark" role="button" aria-pressed="true">邮箱</a>
-                    <a href="./" class="p-2 btn btn-outline-dark" role="button" aria-pressed="true">GITHUB</a>
-                    <br><br>
-                    <a href="./" class="p-2 btn btn-utline-dark" role="button" aria-pressed="true"><i class="mdui-icon material-icons">&#xe863;</i></a>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
+
+    <!-- 侧滑栏 -->
+    <div class="CheHuaLan">
+        <br><br><br>
+        <img class="tx" src="http://q2.qlogo.cn/headimg_dl?dst_uin=914933408&spec=100" alt="头像" />
+        <p class="CheHuaLan-p">一个萌新不定期更新</p>
+        <hr width="80%">
+        <div>
+            <li class="CheHuaLan-LieBiao"><a href="">首页</a></li>
+            <li class="CheHuaLan-LieBiao"><a href="./archives/index.html">文章</a></li>
+            <li class="CheHuaLan-LieBiao"><a href="./archives/suisuiread.html">碎碎念</a></li>
+     
+        </div>
+    </div>
+
+    <!--菜单按钮-->
+    <div class="CaiDan">
+        <a>≡</a>
+    </div>
+
+    <!--前部分-->
+    <div class="bg">
+        <br><br><br><br><br><br><br><br>
+        <img class="tx" src="http://q2.qlogo.cn/headimg_dl?dst_uin=914933408&spec=100" alt="头像" />
+        <h3 class="bloglogo">DZY'BLOG</h3>
+        <div class="wenan">
+            <p class="jinrishici-sentence"></p>
+        </div>
+        <div class="lianxi">
+            <br><br>
+            <a onclick=" alert('微信：wxid_n9n10j2pm8xh22');">微信</a>
+            <a onclick=" alert('QQ：914933408');">QQ</a>
+            <a onclick=" alert('邮箱：914933408@qq.com');">邮箱</a>
+            <a href="https://github.com/ejjava">GITHUB</a>
+        </div>
+        <br><br>
+        <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    </div>
+
+    <h2 class="WenZhang-h2">文章</h2>
+ <br>
+    <!--文章内容-->
+    <div id="WenZhang-NeiRong">
+        <div id="WenZhang-KaPian" class="WenZhang">
+            <img height="80" class="WenZhang-img" alt="...">
+            <div class="card-body">
+                <h1 class="WenZhang-BiaoTi">加载中...</h1>
+                <p class="WenZhang-JieShao">加载中...</p>
+
+                <div style="text-align: right;">
+                    <a href="./" class="WenZhang-CaKan" style="margin-right: 20px;">查看</a>
                 </div>
-                <p>公告:欢迎来的DZY的小家</p>
             </div>
-    </div>
-    <div id="cardContainer" class="text-centr container">
-        <h4 class="text-center">文章</h4>
-        <div id="cardContainer" class="container">
-            <!-- 卡片模板 -->
-            <div id="cardTemplate" class="card m-1">
-                <img class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="./" class="p-2 btn btn-outline-dark" role="button" aria-pressed="true">查看</a>
-                </div>
-            </div>
+            <br>
         </div>
     </div>
-    <div class="crd text-center">
-        <div class="card-body">
-            <p>Copyright © by DZY All Rights Reserved 2023.</p>
-        </div>
+    <br>
+    <br>
+
+    <!--页脚-->
+    <p class="YeJiao">Copyright © by DZY All Rights Reserved 2023-2025</p>
+
+    <!--公告-->
+    <div class="TongZhi" ;>
+        <p>公告:博客正在优化<br>正在脱离框架</p>
     </div>
-    <div id="update-notification" class="mdui-card mdui-shadow-5">
-        <div class="mdui-card-content">
-            <span id="sitetime"></span><!-- 运行时间 -->
-        </div>
+
+    <!--返回顶部-->
+    <div style="border-radius:10px" class="HanHuiDingBu">
+        <a href="#">返回顶部</a>
     </div>
-    <script>
-        window.addEventListener('load', function() {
-            var updateNotification = document.getElementById('update-notification');
-            // 模拟每次启动都有更新
-            var hasUpdate = true;
-            if (hasUpdate) {
-                updateNotification.style.transform = 'translateX(0)';
-                updateNotification.style.opacity = '1';
-                setTimeout(function() {
-                    updateNotification.style.transform = 'translateX(100%)';
-                    updateNotification.style.opacity = '0';
-                }, 3000); // 过3秒后自动隐藏
-            }
-        });
-    </script>
-    <script src="js/diaoyong.js"></script><!-- 调用 -->
-    <script src="js/content.js"></script> <!-- 引用外部的JavaScript文件 -->
-    <script src="js/sitetime.js"></script><!-- 运行时间 -->
-    <!-- 一言 -->
-    <script src="js/yiyan.js"></script>
-    <!-- 选项 1：jQuery 和 Bootstrap 集成包（集成了 Popper） -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-7ymO4nGrkm372HoSbq1OY2DP4pEZnMiA+E0F3zPr+JQQtQ82gQ1HPY3QIVtztVua" crossorigin="anonymous"></script>
-    <!-- MDUI JavaScript -->
-    <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+
+    <script src="js/content.js"></script> <!-- 文章获取 -->
+    <script src="js/CheHuaLan.js"></script><!-- 侧滑栏组件 -->
+    <script src="js/JianChe.js"></script><!-- 监测按钮 -->
+
 </body>
 
 </html>

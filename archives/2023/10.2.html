@@ -1,19 +1,14 @@
 <!doctype html>
 <html lang="zh-cmn-Hans">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
     <meta name="renderer" content="webkit" />
     <meta name="force-rendering" content="webkit" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <link rel="stylesheet" href="./css/tc.css" /> <!-- 弹窗 -->
-    <link rel="stylesheet" href="./css/bj.css" /> <!-- 背景 -->
-    <link rel="stylesheet" href="./css/yj.css" /> <!-- 圆角 -->
-    <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
-    <!-- Bootstrap 的 CSS 文件 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <!-- MDUI CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+    <link rel="stylesheet" href="./css/BeiJing.css" /> <!-- 背景 -->
+    <link rel="stylesheet" href="./css/Home.css" /> <!-- 主页 -->
     <title>DZY's Blog- 爱生活 爱分享！</title>
     <meta name="keywords" content=分享,blog,DZY,自制博客,博客>
     <meta name="description" content="DZY's Blog- 爱生活 爱分享">
@@ -21,89 +16,127 @@
         body {
             font-weight: 700;
         }
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url(https://root-a.top/Random);
-            opacity: 0.5; /* 透明度，可以根据需要进行调整 */
-            z-index: -1; /* 将背景置于最底层 */
-        }
     </style>
 </head>
+
 <body>
-    <div id="chehuanlan"></div>
-    <br><br>
-    <!-- 内容区 -->
-    <div class="card m-2">
-        <div class="card-body">
-            <h3 class="text-center">高中法向量求法（持续更新）</h3>
-            <p class="text-center">发布于:2023.10.2 本文总阅读量<span id="busuanzi_value_page_pv"></span>次</p>
-            <p>最新写作业时候发现法向量算的又慢又不准！于是写下了本篇文章！（用于选择填空，验算）</p>
-            <h4>方法一</h4>
-            <p>假设有两个向量A=(9,8,5) B=(2，1，1)</p>
-            <h6>①先将它们每个重复写2遍</h6>
+
+    <!-- 侧滑栏 -->
+    <div class="CheHuaLan">
+        <br><br><br>
+        <img class="tx" src="http://q2.qlogo.cn/headimg_dl?dst_uin=914933408&spec=100" alt="头像" />
+        <p class="CheHuaLan-p">一个萌新不定期更新</p>
+        <hr width="80%">
+        <div>
+            <li class="CheHuaLan-LieBiao"><a href="../../../">首页</a></li>
+            <li class="CheHuaLan-LieBiao"><a href="../../archives/index.html">文章</a></li>
+            <li class="CheHuaLan-LieBiao"><a href="../../archives/suisuiread.html">碎碎念</a></li>
+           </div>
+    </div>
+
+    <!--菜单按钮-->
+    <div class="CaiDan">
+        <a>≡</a>
+    </div>
+   
+ <br>
+ <br>
+    <!--内容-->
+<div id="NeiRong">
+    <div id="NeiRong-KaPian" class="NeiRong">      
+        <h1 class="NeiRong-BiaoTi">高中法向量求法（持续更新）</h1>
+        <p class="NeiRong-FaBu">发布于:2023.10.2 本文总阅读量<span id="busuanzi_value_page_pv"></span>次</p> 
+        <hr width="80%">
+        <br>
+        
+        <div class="NeiRong-PaiBan">
+            <p>最近写作业时发现法向量算得又慢又不准！于是写下本篇文章，分享两种高效计算方法（适用于选择填空和验算）。</p>
+            
+            <h3>方法一：重复掐头去尾法</h3>
+            <p>假设有两个向量 A=(9,8,5)，B=(2,1,1)</p>
+            
+            <h4>步骤演示：</h4>
+            <h5>① 先将它们每个重复写2遍</h5>
             <p>9 8 5 9 8 5</p>
             <p>2 1 1 2 1 1</p>
-            <h6>②掐头去尾</h6>
-              <p> 8 5 9 8 </p>
-            <p> 1 1 2 1 </p>
-              <h6>②组成新的三组</h6>
-            <p> 8 5 &nbsp;&nbsp;5 9&nbsp;&nbsp; 9 8</p>
-            <p> 1 1 &nbsp;&nbsp;1 2&nbsp;&nbsp; 2 1</p>
-            <h6>②交叉相乘并相减</h6>
-          <p>n=(x,y,z)</p>
-          <p>X:1*8-1*5=3</p>
-          <p>X:5*2-9*1=1</p>
-          <p>X:9*1-2*8=-7</p>
-          <p>所以n=(3,1,-7)</p>
-          <h4>方法二（推荐）</h4>
-          <p>这就是叉乘(大学)吗？^0^</p>
-          <p>a=(x1,y1,z1)&nbsp;a=(x2,y2,z2)</p>
-          <p>axb=(y1z2-y2z1,-(x1z2-x2z1),x1y2-x2y1)</p>
-          <p>好复杂啊！没关系，我有口诀！</p>
-          <h5>!!!!!!求谁挡谁，求交叉相乘相减，y轴相反!!!!!!</h5>
-          <p>看不懂的评论区留言！</p>
+            
+            <h5>② 掐头去尾</h5>
+            <p>8 5 9 8</p>
+            <p>1 1 2 1</p>
+            
+            <h5>③ 组成新的三组</h5>
+            <p>8 5 &nbsp;&nbsp;5 9&nbsp;&nbsp; 9 8</p>
+            <p>1 1 &nbsp;&nbsp;1 2&nbsp;&nbsp; 2 1</p>
+            
+            <h5>④ 交叉相乘并相减</h5>
+            <p>设法向量 n=(x,y,z)</p>
+            <p>X: 1×8 - 1×5 = 3</p>
+            <p>Y: 5×2 - 9×1 = 1</p>
+            <p>Z: 9×1 - 2×8 = -7</p>
+            <p>最终得到法向量 n=(3,1,-7)</p>
+            
+            <h3>方法二：叉乘法（推荐）</h3>
+            <p>这其实就是大学里学的叉乘法 ^0^</p>
+            <p>设向量 a=(x₁,y₁,z₁)，b=(x₂,y₂,z₂)</p>
+            <p>a×b=(y₁z₂-y₂z₁, -(x₁z₂-x₂z₁), x₁y₂-x₂y₁)</p>
+            
+            <h4>记忆口诀：</h4>
+            <p style="background-color:#f5f5f5; padding:10px; border-left:3px solid #ff6b6b;">
+                <strong>求谁挡谁，求交叉相乘相减，y轴相反</strong>
+            </p>
+            
+            <h3>方法对比</h3>
+            <table style="width:100%; border-collapse:collapse;">
+                <tr style="background-color:#f8f9fa;">
+                    <th style="border:1px solid #ddd; padding:8px;">方法</th>
+                    <th style="border:1px solid #ddd; padding:8px;">优点</th>
+                    <th style="border:1px solid #ddd; padding:8px;">缺点</th>
+                </tr>
+                <tr>
+                    <td style="border:1px solid #ddd; padding:8px;">一</td>
+                    <td style="border:1px solid #ddd; padding:8px;">步骤清晰，适合初学者</td>
+                    <td style="border:1px solid #ddd; padding:8px;">步骤较多，速度较慢</td>
+                </tr>
+                <tr style="background-color:#f8f9fa;">
+                    <td style="border:1px solid #ddd; padding:8px;">二</td>
+                    <td style="border:1px solid #ddd; padding:8px;">计算快捷，适合熟练后使用</td>
+                    <td style="border:1px solid #ddd; padding:8px;">需要记忆公式</td>
+                </tr>
+            </table>
+            
+            <h3>注意事项</h3>
+            <ul>
+                <li>计算时注意正负号，特别是y分量要取相反数</li>
+                <li>建议先用方法一理解原理，熟练后改用方法二提高速度</li>
+                <li>计算结果可以用点乘验证（法向量应与原向量都垂直）</li>
+            </ul>
+            
+            <p>如果有不明白的地方，欢迎在评论区留言讨论！我会持续更新更多解题技巧。</p>
         </div>
     </div>
-    <div class="card m-2">
-        <div class="card-header">
-            <h6>分类</h6>
+</div>
+    <br>
+    <div class="FenLei">
+    <h2 class="NeiRong-h2">分类</h2> 
+    <hr width="80%">
+<div class="lianxi">
+            <br>        
+            <a href="">网站历程</a>
+            <br>
         </div>
-        <div class="card-body">
-            <blockquote class="blockquote mb-0">
-                <a href="./" class="p-2 btn btn-outline-dark" role="button" aria-pressed="true">学习</a>
-            </blockquote>
         </div>
-    </div>
-    <!-- 内容区 -->
-    <div id="waline"></div>
-    <script type="module">
-        import {
-            init
-        } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+    <!--页脚-->
+    <p class="YeJiao">Copyright © by DZY All Rights Reserved 2023-2025</p>
 
-        init({
-            el: '#waline',
-            serverURL: 'https://ejcomment.netlify.app//.netlify/functions/comment',
-        });
-    </script>
-    <!-- 底部区 -->
-    <div id="footer"></div>
-    <!-- 底部区 -->
-    <script src="js/diaoyong1.js"></script> <!-- 调用 -->
-    <script src="http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
-    <!-- 访问  -->
-    <script src="js/sitetime.js"></script><!-- 运行时间 -->
-    <!-- 一言 -->
-    <script src="js/yiyan.js"></script>
-    <!-- 选项 1：jQuery 和 Bootstrap 集成包（集成了 Popper） -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-7ymO4nGrkm372HoSbq1OY2DP4pEZnMiA+E0F3zPr+JQQtQ82gQ1HPY3QIVtztVua" crossorigin="anonymous"></script>
-    <!-- MDUI JavaScript -->
-    <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+    <!--返回顶部-->
+    <div style="border-radius:10px" class="HanHuiDingBu">
+        <a href="#">返回顶部</a>
+    </div>
+    <script src="http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">  <!-- 访问  -->
+    <script src="js/content.js"></script> <!-- 文章获取 -->
+    <script src="js/CheHuaLan.js"></script><!-- 侧滑栏组件 -->
+    <script src="js/JianChe.js"></script><!-- 监测按钮 -->
+
 </body>
+
 </html>

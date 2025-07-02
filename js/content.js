@@ -1,6 +1,12 @@
 
 document.addEventListener("DOMContentLoaded", function() {
   var contentData = [
+   {
+      title: "今日份幸福饺子",
+      text: "幸福是什么？",
+      image: "",
+      link: "./archives/2025/7.2.html"
+    },
     {
       title: "高中法向量求法（持续更新）",
       text: "简单高效的法向量求法!",
@@ -22,29 +28,32 @@ document.addEventListener("DOMContentLoaded", function() {
     {
       title: "Hello World",
       text: "这是我手搓的一个乐射博客",
-      image: "https://www.dmoe.cc/random.php",
+      image: "",
       link: "./archives/2023/8.1.html"
     }
   ];
 
-  var cardContainer = document.getElementById('cardContainer');
-  var cardTemplate = document.getElementById('cardTemplate');
+  var cardContainer = document.getElementById('WenZhang-NeiRong');
+  var cardTemplate = document.getElementById('WenZhang-KaPian');
 
   contentData.forEach(function(data) {
     var newCard = cardTemplate.cloneNode(true);
     newCard.removeAttribute('id');
-    newCard.querySelector('.card-title').textContent = data.title;
-    newCard.querySelector('.card-text').textContent = data.text;
+   
+    newCard.querySelector('.WenZhang-BiaoTi').textContent = data.title;
+    newCard.querySelector('.WenZhang-JieShao').textContent = data.text;
 
     var imageUrl = data.image ? data.image : "https://www.dmoe.cc/random.php";
     var randomUrl = imageUrl + "?random=" + Math.random();
-    newCard.querySelector('.card-img-top').setAttribute("src", randomUrl);
+    newCard.querySelector('.WenZhang-img').setAttribute("src", randomUrl);
 
-    var linkElement = newCard.querySelector('.btn');
+    var linkElement = newCard.querySelector('.WenZhang-CaKan');
     linkElement.setAttribute("href", data.link);
 
     cardContainer.appendChild(newCard);
   });
+  
+   
 
   // 移除卡片模板
   cardTemplate.remove();
