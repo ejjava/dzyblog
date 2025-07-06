@@ -2,6 +2,12 @@
 document.addEventListener("DOMContentLoaded", function() {
   var contentData = [
    {
+      title: "王者-反向冲分",
+      text: "王者？",
+      image: "",
+      link: "./archives/2025/7.6.html"
+    },
+    {
       title: "今日份幸福饺子",
       text: "幸福是什么？",
       image: "",
