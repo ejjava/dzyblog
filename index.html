@@ -1,75 +1,94 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="zh-cmn-Hans">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>简约透明博客</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+    <meta name="renderer" content="webkit" />
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" href="./css/BeiJing.css" />
+    <link rel="stylesheet" href="./css/Home.css" />
+    <title>DZY's Blog- 爱生活 爱分享！</title>
+    <meta name="keywords" content="分享,blog,DZY,自制博客,博客">
+    <meta name="description" content="DZY's Blog- 爱生活 爱分享">
+    <style>
+        body {
+            font-weight: 700;
+        }
+    </style>
 </head>
 <body>
-    <!-- 夜间模式切换按钮 - 右上角 -->
-    <div class="theme-toggle-container">
-        <button id="themeToggleBtn" class="theme-btn">
-            <svg class="theme-icon" viewBox="0 0 24 24">
-                <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1-8.313-12.454z"/>
-            </svg>
-        </button>
+    <!-- 侧滑栏 -->
+    <div class="CheHuaLan">
+        <br><br><br>
+        <img class="tx" style="height: 100px;" src="./头像.jpg" alt="头像" />
+        <p class="CheHuaLan-p">一个萌新不定期更新</p>
+        <hr width="80%">
+        <div>
+            <li class="CheHuaLan-LieBiao"><a href="">首页</a></li>
+            <li class="CheHuaLan-LieBiao"><a href="./archives/index.html">文章</a></li>
+            <li class="CheHuaLan-LieBiao"><a href="./archives/suisuiread.html">碎碎念</a></li>
+        </div>
     </div>
 
-    <header class="header">
-        <h1>透明笔记</h1>
-        <p>极简 · 透明 · 专注</p>
-    </header>
+    <!--菜单按钮-->
+    <div class="CaiDan">
+        <a>≡</a>
+    </div>
 
-    <!-- 直线导航栏 -->
-    <nav class="linear-nav">
-        <div class="nav-links">
-            <a href="index.html" class="nav-link act关ive">
-                <svg class="nav-icon" viewBox="0 0 24 24">
-                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-                </svg>
-                <span>首页</span>
-            </a>
-            <a href="archive.html" class="nav-link">
-                <svg class="nav-icon" viewBox="0 0 24 24">
-                    <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/>
-                </svg>
-                <span>归档</span>
-            </a>
-            <a href="#" class="nav-link">
-                <svg class="nav-icon" viewBox="0 0 24 24">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                </svg>
-                <span>关于</span>
-            </a>
-             <a href="#" class="nav-link">
-                <svg class="nav-icon" viewBox="0 0 24 24">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                </svg>
-                <span>关于</span>
-            </a>
+    <!--前部分-->
+    <div class="bg">
+        <br><br><br><br><br><br><br><br>
+        <img class="tx" style="height: 100px;" src="./头像.jpg" alt="头像" />
+        <h3 class="bloglogo">DZY'BLOG</h3>
+        <div class="wenan">
+            <p class="jinrishici-sentence"></p>
         </div>
-    </nav>
+        <div class="lianxi">
+            <br><br>
+            <a onclick="alert('微信：wxid_n9n10j2pm8xh22');">微信</a>
+            <a onclick="alert('QQ：914933408');">QQ</a>
+            <a onclick="alert('邮箱：914933408@qq.com');">邮箱</a>
+            <a href="https://github.com/ejjava">GITHUB</a>
+        </div>
+        <br><br>
+        <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    </div>
 
-    <div class="container">
-        <div class="filter-bar">
-            <input type="text" id="searchInput" placeholder="搜索文章..." class="search-input">
-            <div class="tag-list" id="tagList">
-                <!-- 标签将通过JS动态生成 -->
+    <h2 class="WenZhang-h2">文章</h2>
+    <br>
+    <!--文章内容-->
+    <div id="WenZhang-NeiRong">
+        <div id="WenZhang-KaPian" class="WenZhang">
+            <img height="80" class="WenZhang-img" alt="...">
+            <div class="card-body">
+                <h1 class="WenZhang-BiaoTi">加载中...</h1>
+                <p class="WenZhang-JieShao">加载中...</p>
+                <div style="text-align: right;">
+                    <a href="./" class="WenZhang-CaKan" style="margin-right: 20px;">查看</a>
+                </div>
             </div>
-        </div>
-        
-        <div class="blog-grid" id="blogGrid">
-            <!-- 博客卡片将通过JS动态生成 -->
+            <br>
         </div>
     </div>
+    <br><br>
 
-    <footer class="footer">
-        <p>© 2023 透明笔记 · 保留所有权利</p>
-    </footer>
+    <!--页脚-->
+    <p class="YeJiao">Copyright © by DZY All Rights Reserved 2023-2025</p>
 
-    <script src="script.js"></script>
-    
+    <!--公告-->
+    <div class="TongZhi">
+        <p>公告:博客正在优化<br>正在脱离框架</p>
+    </div>
+
+    <!--返回顶部-->
+    <div style="border-radius:10px" class="HanHuiDingBu">
+        <a href="#">返回顶部</a>
+    </div>
+
+    <script src="js/content.js"></script>
+    <script src="js/CheHuaLan.js"></script>
+    <script src="js/JianChe.js"></script>
 </body>
 </html>
