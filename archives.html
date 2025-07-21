@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="zh-cmn-Hans">
 <head>
@@ -21,7 +22,7 @@
     
     // 加载JSON数据
 function loadArticles(callback) {
-    fetch('data/articles.json')
+    fetch('articles.json')
         .then(response => {
             if (!response.ok) throw new Error('网络响应不正常');
             return response.json();
@@ -222,5 +223,5 @@ document.addEventListener('DOMContentLoaded', function() {
     <script src="js/JianChe.js"></script>
     <script src="js/sou.js"></script>
     
-</body>
+<!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "aa6b6e4baddb4a1eb485b1a20fe6c9f7"}'></script><!-- Cloudflare Pages Analytics --></body>
 </html>
