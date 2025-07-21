@@ -9,12 +9,26 @@
     <link rel="shortcut icon" href="./favicon.ico">
     <link rel="stylesheet" href="./css/BeiJing.css">
     <link rel="stylesheet" href="./css/Home.css">
-    <title>DZY's Blog- 文章列表</title>
+    <title>DZY's Blog- 文章详情</title>
     <meta name="keywords" content="分享,blog,DZY,自制博客,博客">
-    <meta name="description" content="DZY's Blog- 文章列表">
+    <meta name="description" content="DZY's Blog- 文章详情">
     <style>
         body {
             font-weight: 700;
+        }
+        /* 新增样式 */
+        .FenLei-outside {
+            margin-top: 30px;
+            background: transparent;
+            padding: 15px;
+            text-align: center;
+        }
+        .return-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #333;
         }
     </style>
 </head>
@@ -22,12 +36,12 @@
     <!-- 侧滑栏 -->
     <div class="CheHuaLan">
         <br><br><br>
-<img class="tx" style="height: 100px;" src="../头像.jpg" alt="头像">
+        <img class="tx" src="http://q2.qlogo.cn/headimg_dl?dst_uin=914933408&spec=100" alt="头像">
         <p class="CheHuaLan-p">一个萌新不定期更新</p>
         <hr width="80%">
         <div>
-            <li class="CheHuaLan-LieBiao"><a href="../">首页</a></li>
-            <li class="CheHuaLan-LieBiao"><a href="">文章</a></li>
+            <li class="CheHuaLan-LieBiao"><a href="../../">首页</a></li>
+            <li class="CheHuaLan-LieBiao"><a href="../index.html">文章</a></li>
             <li class="CheHuaLan-LieBiao"><a href="suisuiread.html">碎碎念</a></li>
         </div>
     </div>
@@ -36,20 +50,19 @@
     <div class="CaiDan">
         <a>≡</a>
     </div>
-
+   
     <br><br>
-    <!--内容-->
+    <!--内容区域-->
     <div id="NeiRong">
+        <!-- 内容将通过main.js动态加载 -->
         <div id="NeiRong-KaPian" class="NeiRong">
-            <h1 class="NeiRong-BiaoTi">文章</h1>
+            <h1 class="NeiRong-BiaoTi">加载中...</h1>
+            <p class="NeiRong-FaBu">发布于:加载中... 更新：加载中...</p>
             <hr width="80%">
             <br>
             <div class="NeiRong-PaiBan">
-                <input class="input" type="text" id="myInput" onkeyup="myFunction()" placeholder="找不到吗？请搜索吧！">
+                内容加载中...
             </div>
-            <ul class="myUL" id="myUL">
-                <li>加载中...</li>
-            </ul>
         </div>
     </div>
     
@@ -65,7 +78,5 @@
     <script src="../js/main.js"></script>
     <script src="../js/CheHuaLan.js"></script>
     <script src="../js/JianChe.js"></script>
-    <script src="./js/sou.js"></script>
-    
 </body>
 </html>
