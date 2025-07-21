@@ -1,6 +1,6 @@
 // 加载JSON数据
 function loadArticles(callback) {
-    fetch('../data/articles.json')
+    fetch('data/articles.json')
         .then(response => {
             if (!response.ok) throw new Error('网络响应不正常');
             return response.json();
@@ -12,7 +12,7 @@ function loadArticles(callback) {
         });
 }
 
-// 主页初始化
+// 主页初始化（显示最新3篇文章）
 function initHomePage() {
     loadArticles(function(articles) {
         const container = document.getElementById('WenZhang-NeiRong');
@@ -29,7 +29,7 @@ function initHomePage() {
             const randomCover = `https://www.dmoe.cc/random.php?t=${Date.now()}-${Math.random().toString(36).substring(2, 8)}`;
             
             articleDiv.innerHTML = `
-                <img height="80" class="WenZhang-img" 
+              <img height="80" class="WenZhang-img" 
                      src="${article.封面链接 || randomCover}" 
                      alt="${article.标题}" 
                      onerror="this.src='${randomCover}'">
@@ -37,11 +37,12 @@ function initHomePage() {
                     <h1 class="WenZhang-BiaoTi">${article.标题}</h1>
                     <p class="WenZhang-JieShao">${article.简介}</p>
                     <div style="text-align: right;">
-                        <a href="archives/detail.html?id=${article.ID}" 
+                        <a href="./detail.html?id=${article.ID}" 
                            class="WenZhang-CaKan" 
                            style="margin-right: 20px;">查看</a>
                     </div>
                 </div>
+                <br>
                 <br>
             `;
             container.appendChild(articleDiv);
@@ -49,7 +50,7 @@ function initHomePage() {
     });
 }
 
-// 文章列表页初始化
+// 文章列表页初始化（archives.html）
 function initArchivePage() {
     loadArticles(function(articles) {
         const container = document.getElementById('myUL');
@@ -82,7 +83,7 @@ function initArchivePage() {
     });
 }
 
-// 文章详情页初始化
+// 文章详情页初始化（detail.html）
 function initDetailPage() {
     const urlParams = new URLSearchParams(window.location.search);
     const articleId = urlParams.get('id');
@@ -91,7 +92,7 @@ function initDetailPage() {
     if (!container) return;
     
     if (!articleId) {
-        container.innerHTML = '<h1>文章不存在</h1><a href="index.html">返回文章列表</a>';
+        container.innerHTML = '<h1>文章不存在</h1><a href="archives.html">返回文章列表</a>';
         return;
     }
     
@@ -99,7 +100,7 @@ function initDetailPage() {
         const article = articles.find(a => a.ID === articleId);
         
         if (!article || !article.标题) {
-            container.innerHTML = '<h1>文章不存在</h1><a href="index.html">返回文章列表</a>';
+            container.innerHTML = '<h1>文章不存在</h1><a href="archives.html">返回文章列表</a>';
             return;
         }
         
@@ -123,7 +124,7 @@ function initDetailPage() {
                 <hr width="80%">
                 <div class="lianxi">
                     <br>
-                    <a href="index.html">${article.分类}</a>
+                    <a href="archives.html">${article.分类}</a>
                     <br>
                 </div>
             </div>
@@ -133,9 +134,9 @@ function initDetailPage() {
 
 // 根据当前页面初始化
 document.addEventListener('DOMContentLoaded', function() {
-    if (window.location.pathname.includes('archives/detail.html')) {
+    if (window.location.pathname.endsWith('detail.html')) {
         initDetailPage();
-    } else if (window.location.pathname.includes('archives/index.html')) {
+    } else if (window.location.pathname.endsWith('archives.html')) {
         initArchivePage();
         // 双重保险初始化搜索
         setTimeout(() => {
