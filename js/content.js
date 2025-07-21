@@ -9,13 +9,14 @@ document.addEventListener('DOMContentLoaded', function() {
             // 清空模板
             container.innerHTML = '';
             
-            // 按创建时间降序排序
-            const sortedData = data.sort((a, b) => {
-                return new Date(b.创建时间) - new Date(a.创建时间);
-            });
+            // 按ID降序排序（ID越大越新）
+            const sortedData = data.sort((a, b) => b.ID - a.ID);
+            
+            // 只取最新的3篇文章
+            const latestArticles = sortedData.slice(0, 3);
             
             // 为每篇文章创建卡片
-            sortedData.forEach(article => {
+            latestArticles.forEach(article => {
                 const card = template.cloneNode(true);
                 card.style.display = 'block';
                 

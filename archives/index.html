@@ -21,13 +21,13 @@
     <!-- 侧滑栏 -->
     <div class="CheHuaLan">
         <br><br><br>
-        <img class="tx" src="http://q2.qlogo.cn/headimg_dl?dst_uin=914933408&spec=100" alt="头像" />
+        <img class="tx" style="height: 100px;" src="../图片资源/头像.jpg" alt="头像" />
         <p class="CheHuaLan-p">一个萌新不定期更新</p>
         <hr width="80%">
         <div>
             <li class="CheHuaLan-LieBiao"><a href="../">首页</a></li>
             <li class="CheHuaLan-LieBiao"><a href="">文章</a></li>
-            <li class="CheHuaLan-LieBiao"><a href="suisuiread.html">碎碎念</a></li>
+            <li class="CheHuaLan-LieBiao"><a href="碎碎念.html">碎碎念</a></li>
         </div>
     </div>
 
@@ -65,21 +65,22 @@
     <script src="../js/CheHuaLan.js"></script>
     <script src="../js/JianChe.js"></script>
     <script src="../js/sou.js"></script>
-    <script>
-        // 动态生成文章列表
-        fetch('../data.json')
-            .then(response => response.json())
-            .then(data => {
-                const ul = document.getElementById('myUL');
-                // 按创建时间降序排序
-                data.sort((a, b) => new Date(b.创建时间) - new Date(a.创建时间))
-                    .forEach(article => {
-                        const li = document.createElement('li');
-                        const datePart = article.创建时间.split('年')[0];
-                        li.innerHTML = `<a href="详情.html?id=${article.ID}">${datePart}-${article.标题}-${article.分类}</a><br>`;
-                        ul.appendChild(li);
-                    });
-            });
-    </script>
+   <script>
+    // 动态生成文章列表
+    fetch('../data.json')
+        .then(response => response.json())
+        .then(data => {
+            const ul = document.getElementById('myUL');
+            // 按 ID 降序排序（ID 大的在前）
+            data.sort((a, b) => b.ID - a.ID)
+                .forEach(article => {
+                    const li = document.createElement('li');
+                    // 直接使用完整时间（如 "2025年7月21日"）
+                    const datePart = article.创建时间;
+                    li.innerHTML = `<a href="详情.html?id=${article.ID}">${datePart} - ${article.标题} - ${article.分类}</a><br><br>`;
+                    ul.appendChild(li);
+                });
+        });
+</script>
 </body>
 </html>
